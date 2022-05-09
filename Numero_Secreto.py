@@ -1,3 +1,4 @@
+import random
 from random import randint
 from time import sleep
 
@@ -12,7 +13,7 @@ print('\n\033[1;30mVocê precisa acertar o número secreto que está '
 numero_secreto = random.randint(1,100)
 chances = 0
 chute = 0
-print(numero_secreto)
+
 
 while chute != numero_secreto and chances < 3:
     sleep(2)
@@ -31,4 +32,4 @@ while chute != numero_secreto and chances < 3:
 
     chances+=1
     sleep(.7)
-print('\033[1;30mFim de jogo!')
+print('\033[1;30mFim de jogo!\nVocê usou {} tentativas'.format(chances+1))
